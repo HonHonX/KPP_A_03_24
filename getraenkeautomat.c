@@ -27,6 +27,10 @@ int main () {
 	
 	//Bezahlvorgang
 	if (wahlgetraenk>=1 && wahlgetraenk<=3) {
+		//Eine Mengenauswahl erfolgt nur dann, wenn ein gültiges Getränk ausgewählt wurde
+		printf("\n\nBitte geben Sie die gewünschte Menge ein: ");
+		scanf("%d",&anzahl);
+				
 		switch (wahlgetraenk) {
 			case 1: warenwert=anzahl*0.50;
 			break;
@@ -36,11 +40,8 @@ int main () {
 			break;
 		}	
 		
-		//Eine Mengenauswahl erfolgt nur dann, wenn ein gültiges Getränk ausgewählt wurde
-		printf("\n\nBitte geben Sie die gewünschte Menge ein: ");
-		scanf("%d",&anzahl);
 		printf("\nWarenwert: %f",warenwert);
-		
+				
 		//Bei der Menge 0 passiert nichts weiter, sonst wird zur Zahlung aufgefordert
 		if (anzahl!=0) {
 			
