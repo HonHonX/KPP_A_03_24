@@ -35,14 +35,14 @@ int main () {
 			break;
 			case 2: warenwert=anzahl*1.00;
 			break;
-			case 3: warenwert=anuahl*2.00;
+			case 3: warenwert=anzahl*2.00;
 			break;
 		}
 
 		//Aufforderung zum Geldeinwurf
 		restbetrag = warenwert;
 		while (restbetrag > 0 && restbetrag<=warenwert) {
-			printf("\nEs fehlen noch %d Euro.\nnBitte werfen Sie ein Geldstueck ein oder drücken Sie die 0 um den Vorgang abzubrechen: ",warenwert);
+			printf("\nEs fehlen noch %f Euro.\nnBitte werfen Sie ein Geldstueck ein oder drücken Sie die 0 um den Vorgang abzubrechen: ",warenwert);
 			scanf("%f",&geldstueck);
 			if (geldstueck==0)
 				break;
