@@ -66,7 +66,7 @@ int main () {
 			else if (restbetrag<0) 
 				printf("\n\nSie haben zu viel eingeworfen. Bitte entnehmen Sie Ihr(e) Getränk(e) und den Restbetrag von %.2f€.", restbetrag*(-1));
 			else
-				printf("\nSie haben die 0 gewählt.Vorgang abgebrochen.Sie erhalten %f€ zurück.Bis bald", warenwert-restbetrag)
+				printf("\nSie haben die 0 gewählt.Vorgang abgebrochen.Sie erhalten %f€ zurück.Bis bald", warenwert-restbetrag);
 				
 		} 			
 	} else 
