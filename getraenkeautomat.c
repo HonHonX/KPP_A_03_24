@@ -44,10 +44,11 @@ int main () {
 		while (restbetrag > 0 && restbetrag<=warenwert) {
 			printf("\nEs fehlen noch %f Euro.\nnBitte werfen Sie ein Geldstueck ein oder drücken Sie die 0 um den Vorgang abzubrechen: ",warenwert);
 			scanf("%f",&geldstueck);
-			if (geldstueck==0)
+			if (geldstueck==0) {
 				break;
-			else 
+			} else {
 				restbetrag-=geldstueck;
+			}
 		}
 		
 		if (anzahl!=0) {
