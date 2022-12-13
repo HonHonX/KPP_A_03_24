@@ -56,6 +56,7 @@ int main () {
 			for (int i=1; i<=anzahl; i++) {
 				printf("\nFlasche %d von %d wurde ausgegeben", i, anzahl);
 			}
+		}
 		
 		//Abgleich der Zahlung
 		if (restbetrag=0) {
