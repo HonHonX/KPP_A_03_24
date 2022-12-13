@@ -60,7 +60,7 @@ int main () {
 		if (restbetrag=0) {
 			printf("\nVielen Dank. Bitte entnehmen Sie Ihr(e) Getraenk(e).");
 		} else {
-			printf("\nSie haben zu viel eingeworfen. Bitte entnehmen Sie ggf. Ihr(e) Getränk(e) und den Restbetrag von %d€, restbetrag");
+			printf("\nSie haben zu viel eingeworfen. Bitte entnehmen Sie ggf. Ihr(e) Getränk(e) und den Restbetrag von %f€", restbetrag);
 		}
 
 	} else {
