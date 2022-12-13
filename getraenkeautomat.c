@@ -55,10 +55,12 @@ int main () {
 					restbetrag-=geldstueck;
 			}	
 		
-			//Getränkeausgabe
-			printf("\n\n--- Getränkeausgabe ---");
-			for (int i=1; i<=anzahl; i++) 
-				printf("\nFlasche %d von %d wurde ausgegeben", i, anzahl);
+			//Getränkeausgabe bei gültigem Einwurf
+			if (geldstueck!=0) {
+				printf("\n\n--- Getränkeausgabe ---");
+				for (int i=1; i<=anzahl; i++) 
+					printf("\nFlasche %d von %d wurde ausgegeben", i, anzahl);
+			}
 		
 			//Abgleich der Zahlung
 			if (restbetrag==0) 
@@ -66,7 +68,7 @@ int main () {
 			else if (restbetrag<0) 
 				printf("\n\nSie haben zu viel eingeworfen. Bitte entnehmen Sie Ihr(e) Getränk(e) und den Restbetrag von %.2f€.", restbetrag*(-1));
 			else
-				printf("\nSie haben die 0 gewählt.Vorgang abgebrochen.Sie erhalten %f€ zurück.Bis bald", warenwert-restbetrag);
+				printf("\nSie haben die 0 gewählt.Vorgang abgebrochen.Sie erhalten %.2f€ zurück.Bis bald", warenwert-restbetrag);
 				
 		} 			
 	} else 
