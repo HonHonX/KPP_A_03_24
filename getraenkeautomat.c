@@ -39,9 +39,7 @@ int main () {
 			case 3: warenwert=anzahl*2.00;
 			break;
 		}	
-		
-		printf("\nWarenwert: %f",warenwert);
-				
+						
 		//Bei der Menge 0 passiert nichts weiter, sonst wird zur Zahlung aufgefordert
 		if (anzahl!=0) {
 			
@@ -66,7 +64,7 @@ int main () {
 			if (restbetrag==0) 
 				printf("\nVielen Dank. Bitte entnehmen Sie Ihr(e) Getraenk(e).");
 			else 
-				printf("\n\nSie haben zu viel eingeworfen. Bitte entnehmen Sie Ihr(e) Getränk(e) und den Restbetrag von %.2f€", restbetrag*(-1));
+				printf("\n\nSie haben zu viel eingeworfen. Bitte entnehmen Sie Ihr(e) Getränk(e) und den Restbetrag von %.2f€.", restbetrag*(-1));
 		} else
 			printf("\nSie haben die 0 gewählt.Vorgang abgebrochen.Bis bald");
 			
