@@ -63,11 +63,12 @@ int main () {
 			//Abgleich der Zahlung
 			if (restbetrag==0) 
 				printf("\nVielen Dank. Bitte entnehmen Sie Ihr(e) Getraenk(e).");
-			else 
+			else if (restbetrag<0) 
 				printf("\n\nSie haben zu viel eingeworfen. Bitte entnehmen Sie Ihr(e) Getränk(e) und den Restbetrag von %.2f€.", restbetrag*(-1));
-		} else
-			printf("\nSie haben die 0 gewählt.Vorgang abgebrochen.Bis bald");
-			
+			else
+				printf("\nSie haben die 0 gewählt.Vorgang abgebrochen.Sie erhalten %f€ zurück.Bis bald", warenwert-restbetrag)
+				
+		} 			
 	} else 
 		printf("\nIhre Wahl war leider ungültig.Vorgang abgebrochen.Bis bald");
 
