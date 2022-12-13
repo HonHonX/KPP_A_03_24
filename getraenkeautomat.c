@@ -37,7 +37,7 @@ int main () {
 		}
 
 		//Aufforderung zum Geldeinwurf
-		printf("\nBitte werfen Sie für Getraenk [%d] folgende Muenze ein: % 1.2f€", wahlgetraenk, warenwert);
+		printf("\nBitte werfen Sie für Getraenk [%d] folgende Muenze ein: %.2f€", wahlgetraenk, warenwert);
 		printf("\nIhr Einwurf [in €] : ");
 		scanf("%f",&geldstueck);
 		
