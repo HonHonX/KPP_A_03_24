@@ -64,7 +64,7 @@ int main () {
 		
 			//Abgleich der Zahlung
 			if (restbetrag==0) 
-				printf("\nVielen Dank. Bitte entnehmen Sie Ihr(e) Getraenk(e).");
+				printf("\nVielen Dank. Sie haben passend gezahlt. Bitte entnehmen Sie Ihr(e) Getraenk(e).");
 			else if (restbetrag<0) 
 				printf("\n\nSie haben zu viel eingeworfen. Bitte entnehmen Sie Ihr(e) Getränk(e) und den Restbetrag von %.2f€.", restbetrag*(-1));
 			else
