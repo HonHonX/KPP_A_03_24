@@ -50,4 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+<<<<<<< HEAD
 getraenkeautomat
+=======
+>>>>>>> afbf1b41982d9af41c4350ad84940ddee723be59
