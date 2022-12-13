@@ -47,7 +47,7 @@ int main () {
 
 			restbetrag = warenwert;
 			while (restbetrag > 0 && restbetrag<=warenwert) {
-				printf("\nEs fehlen noch %.2f Euro.\nBitte werfen Sie ein Geldstueck ein oder drücken Sie die 0 um den Vorgang abzubrechen: ",warenwert);
+				printf("\nEs fehlen noch %.2f Euro.\nBitte werfen Sie ein Geldstueck ein oder drücken Sie die 0 um den Vorgang abzubrechen: ",restbetrag);
 				scanf("%f",&geldstueck);
 				if (geldstueck==0) 
 					break;
