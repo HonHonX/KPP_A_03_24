@@ -3,16 +3,16 @@
 int main () {
 
 	/*
-	* 	Diese Programm soll einen Getraenkeautomaten simulieren.
+	* Diese Programm soll einen Getraenkeautomaten simulieren.
 	*/
 
 	//Variablen
-	int wahlgetraenk;
-	float warenwert,geldstueck; 
+	int wahlgetraenk,anzahl;
+	float warenwert,geldstueck,restbetrag; 
 
 	printf("\n ************************************* ");
 	printf("\n *   ^,,,,^   *                      * ");
-	printf("\n *  ( o x o)  * Getränkeautomat v0.2 * ");
+	printf("\n *  ( o x o)  * Getränkeautomat v0.3 * ");
 	printf("\n *  ( 7   7)  *                      * ");
 	printf("\n *   ´´´´´´   *              ©S.Buch * ");
 	printf("\n ************************************* \n");
@@ -24,28 +24,43 @@ int main () {
  	printf("\n[3] Bier (2.00€)");	
 	printf("\n\nBitte geben Sie 1,2 oder 3 für ihr gewünschtes Getränk ein: ");
 	scanf("%d",&wahlgetraenk);
+	printf("\n\nBitte geben Sie die gewünschte Menge ein: ");
+	scanf("%d",&anzahl);
 
-	//Zahlungsaufforderung
+	//Bezahlvorgang
+	printf("\n\n--- Bezahlvorgang ---");
 	if (wahlgetraenk>=1 && wahlgetraenk<=3) {
 		switch (wahlgetraenk) {
-			case 1: warenwert=0.50;
+			case 1: warenwert=anzahl*0.50;
 			break;
-			case 2: warenwert=1.00;
+			case 2: warenwert=anzahl*1.00;
 			break;
-			case 3: warenwert=2.00;
+			case 3: warenwert=anuahl*2.00;
 			break;
 		}
 
 		//Aufforderung zum Geldeinwurf
-		printf("\nBitte werfen Sie für Getraenk [%d] folgende Muenze ein: %.2f€", wahlgetraenk, warenwert);
-		printf("\nIhr Einwurf [in €] : ");
-		scanf("%f",&geldstueck);
+		restbetrag = warenwert;
+		while (restbetrag > 0 && restbetrag<=warenwert) {
+			printf("\nEs fehlen noch %d Euro.\nnBitte werfen Sie ein Geldstueck ein oder drücken Sie die 0 um den Vorgang abzubrechen: ",warenwert);
+			scanf("%f",&geldstueck);
+			if (geldstueck==0)
+				break;
+			else 
+				restbetrag-=geldstueck;
+		}
+		
+		if (anzahl!=0) {
+			printf("\n\n--- Getränkeausgabe ---");
+			for (int i=1; i<=anzahl; i++) {
+				printf("\nFlasche %d von %d wurde ausgegeben, i, anzahl");
+			}
 		
 		//Abgleich der Zahlung
-		if (geldstueck==warenwert) {
-			printf("\nVielen Dank. Bitte entnehmen Sie Ihr Getraenk.");
+		if (restbetrag=0) {
+			printf("\nVielen Dank. Bitte entnehmen Sie Ihr(e) Getraenk(e).");
 		} else {
-			printf("\nLeider haben Sie nicht das passende Geldstueck eingeworfen.");
+			printf("\nSie haben zu viel eingeworfen. Bitte entnehmen Sie ggf. Ihr(e) Getränk(e) und den Restbetrag von %d€, restbetrag");
 		}
 
 	} else {
