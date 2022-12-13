@@ -28,8 +28,7 @@ int main () {
 	scanf("%d",&anzahl);
 
 	//Bezahlvorgang
-	printf("\n\n--- Bezahlvorgang ---");
-	if (wahlgetraenk>=1 && wahlgetraenk<=3) {
+	if (wahlgetraenk>=1 && wahlgetraenk<=3 && anzahl!=0) {
 		switch (wahlgetraenk) {
 			case 1: warenwert=anzahl*0.50;
 			break;
@@ -38,6 +37,8 @@ int main () {
 			case 3: warenwert=anzahl*2.00;
 			break;
 		}
+		
+		printf("\n\n--- Bezahlvorgang ---");
 
 		//Aufforderung zum Geldeinwurf
 		restbetrag = warenwert;
@@ -50,21 +51,17 @@ int main () {
 				restbetrag-=geldstueck;
 		}
 		
-		if (anzahl!=0) {
-			printf("\n\n--- Getränkeausgabe ---");
-			for (int i=1; i<=anzahl; i++) {
-				printf("\nFlasche %d von %d wurde ausgegeben", i, anzahl);
-			}
-			//Abgleich der Zahlung
-			if (restbetrag==0) 
-				printf("\nVielen Dank. Bitte entnehmen Sie Ihr(e) Getraenk(e).");
-			else 
-				printf("\n\nSie haben zu viel eingeworfen. Bitte entnehmen Sie ggf. Ihr(e) Getränk(e) und den Restbetrag von %.2f€", restbetrag*(-1));
-		} else 
-				printf("Vielleicht ein anderes Mal!");
+		//Getränkeausgabe
+		printf("\n\n--- Getränkeausgabe ---");
+		for (int i=1; i<=anzahl; i++) {
+			printf("\nFlasche %d von %d wurde ausgegeben", i, anzahl);
 		
-		
-
+		//Abgleich der Zahlung
+		if (restbetrag==0) 
+			printf("\nVielen Dank. Bitte entnehmen Sie Ihr(e) Getraenk(e).");
+		else 
+			printf("\n\nSie haben zu viel eingeworfen. Bitte entnehmen Sie ggf. Ihr(e) Getränk(e) und den Restbetrag von %.2f€", restbetrag*(-1));
+			
 	} else 
 		printf("\nIhre Wahl war leider ungültig.Vorgang abgebrochen.");
 
