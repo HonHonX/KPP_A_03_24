@@ -42,7 +42,7 @@ int main () {
 		//Aufforderung zum Geldeinwurf
 		restbetrag = warenwert;
 		while (restbetrag > 0 && restbetrag<=warenwert) {
-			printf("\nEs fehlen noch %f Euro.\nnBitte werfen Sie ein Geldstueck ein oder drücken Sie die 0 um den Vorgang abzubrechen: ",warenwert);
+			printf("\nEs fehlen noch %.2f Euro.\nnBitte werfen Sie ein Geldstueck ein oder drücken Sie die 0 um den Vorgang abzubrechen: ",warenwert);
 			scanf("%f",&geldstueck);
 			if (geldstueck==0) {
 				break;
@@ -62,7 +62,7 @@ int main () {
 		if (restbetrag=0) {
 			printf("\nVielen Dank. Bitte entnehmen Sie Ihr(e) Getraenk(e).");
 		} else {
-			printf("\nSie haben zu viel eingeworfen. Bitte entnehmen Sie ggf. Ihr(e) Getränk(e) und den Restbetrag von %f€", restbetrag);
+			printf("\nSie haben zu viel eingeworfen. Bitte entnehmen Sie ggf. Ihr(e) Getränk(e) und den Restbetrag von %.2f€", restbetrag);
 		}
 
 	} else {
