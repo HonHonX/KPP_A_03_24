@@ -53,7 +53,7 @@ int main () {
 		
 		//Getränkeausgabe
 		printf("\n\n--- Getränkeausgabe ---");
-		for (int i=1; i<=anzahl; i++) {
+		for (int i=1; i<=anzahl; i++) 
 			printf("\nFlasche %d von %d wurde ausgegeben", i, anzahl);
 		
 		//Abgleich der Zahlung
