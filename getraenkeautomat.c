@@ -47,12 +47,14 @@ int main () {
 
 			restbetrag = warenwert;
 			while (restbetrag > 0 && restbetrag<=warenwert) {
-				printf("\nEs fehlen noch %.2f Euro.\nBitte werfen Sie ein Geldstueck ein oder drücken Sie die 0 um den Vorgang abzubrechen: ",restbetrag);
+				printf("\nEs fehlen noch %.2f Euro.\nBitte werfen Sie ein Geldstueck (0.5€/1€/2€) ein oder drücken Sie die 0 um den Vorgang abzubrechen: ",restbetrag);
 				scanf("%f",&geldstueck);
 				if (geldstueck==0) 
 					break;
-				else 
+				else if (geldstueck==0.5||geldstueck==1||geldstueck==2)
 					restbetrag-=geldstueck;
+				else 
+					printf("\nSie haben kein gültiges Geldstück eingeworfen. Bitte werfen sie 0.5€, 1€ oder 2€ ein.\n");
 			}	
 		
 			//Getränkeausgabe bei gültigem Einwurf
